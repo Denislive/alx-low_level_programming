@@ -9,22 +9,23 @@ void times_table(void)
 
 	for (row = 0; row <= 9; row++)
 	{
-		_putchar('0'); /* Print the first digit */
+		_putchar('0');
+		_putchar(',');
 
 		for (column = 1; column <= 9; column++)
 		{
-			_putchar(',');
 			_putchar(' ');
 
 			result = row * column;
 
-			/* Print leading zero if necessary */
 			if (result <= 9)
 				_putchar(' ');
 
-			/* Print the result */
 			_putchar(result / 10 + '0');
 			_putchar(result % 10 + '0');
+
+			if (column != 9)
+				_putchar(',');
 		}
 
 		_putchar('\n');

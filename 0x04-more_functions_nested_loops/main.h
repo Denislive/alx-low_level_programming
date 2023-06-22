@@ -13,7 +13,7 @@ void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
 void print_str(char *str);
-void print_number(int num);
+void print_number(int n);
 void print_char(char c);
 void print_triangle(int size);
 

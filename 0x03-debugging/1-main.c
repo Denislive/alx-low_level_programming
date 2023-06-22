@@ -10,16 +10,15 @@
  */
 int main(void)
 {
-	int i;
-
 	printf("Infinite loop incoming :(\n");
 
-	i = 0;
-
-	/* Commenting out the problematic code causing the infinite loop
+	// Commenting out the problematic code causing the infinite loop
+	/*
+	int i = 0;
 	while (i < 10)
 	{
 		putchar(i);
+		i++;
 	}
 	*/
 

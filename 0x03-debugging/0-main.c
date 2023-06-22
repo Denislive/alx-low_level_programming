@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * main - tests the positive_or_negative function with 0
+ * main - Tests the positive_or_negative function with 0
+ *
  * Return: Always 0
  */
 int main(void)

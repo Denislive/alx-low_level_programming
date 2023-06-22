@@ -12,5 +12,8 @@ void more_numbers(void);
 void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
+void print_str(char *str);
+void print_number(int num);
+void print_char(char c);
 
 #endif /* MAIN_H */

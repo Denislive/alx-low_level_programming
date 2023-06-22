@@ -1,18 +1,27 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * main - check the code
+ * main - Entry point of the program
  *
- * Return: Always 0.
+ * Description: This function demonstrates an infinite loop.
+ *              However, the problematic code causing the infinite loop has been commented out.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    char c;
+	printf("Infinite loop incoming :(\n");
 
-    c = '0';
-    printf("%c: %d\n", c, _isdigit(c));
-    c = 'a';
-    printf("%c: %d\n", c, _isdigit(c));
-    return (0);
+	/* Commenting out the problematic code causing the infinite loop
+	int i = 0;
+	while (i < 10)
+	{
+		putchar(i);
+		i++;
+	}
+	*/
+
+	printf("Infinite loop avoided! \\o/\n");
+
+	return (0);
 }

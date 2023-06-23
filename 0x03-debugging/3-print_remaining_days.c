@@ -12,38 +12,23 @@
 
 void print_remaining_days(int month, int day, int year)
 {
-    int days_in_month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    int leap = 0;
+    int daysInMonth[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int i, totalDays = 0;
 
-    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
-    {
-        days_in_month[2] = 29;
-        leap = 1;
-    }
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+        daysInMonth[2] = 29; // February has 29 days in a leap year
 
-    if (month < 1 || month > 12 || day < 1 || day > days_in_month[month])
+    if (month < 1 || month > 12 || day < 1 || day > daysInMonth[month])
     {
         printf("Invalid date: %02d/%02d/%04d\n", month, day, year);
         return;
     }
 
-    int day_of_year = day;
-    for (int i = 1; i < month; i++)
-    {
-        day_of_year += days_in_month[i];
-    }
+    for (i = month; i <= 12; i++)
+        totalDays += daysInMonth[i];
 
-    if (leap && month > 2)
-    {
-        day_of_year++;
-    }
+    totalDays -= day;
 
-    int days_remaining = 365 - day_of_year;
-    if (leap && month <= 2)
-    {
-        days_remaining++;
-    }
-
-    printf("Day of the year: %d\n", day_of_year);
-    printf("Remaining days: %d\n", days_remaining);
+    printf("Day of the year: %d\n", totalDays);
+    printf("Remaining days: %d\n", daysInMonth[2] - day + totalDays);
 }

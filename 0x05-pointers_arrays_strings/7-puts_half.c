@@ -24,7 +24,7 @@ int _strlen(char *s)
  * @str: Pointer to the string.
  *
  * Description:
- *   - This function takes a string pointer. 
+ *   - This function takes a string pointer.
  *     of the string, followed by a new line.
  *   - If the number of characters in the string.
  *     characters of the string.

@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * puts2 - Prints every other character of a string, starting with the first character.
+ * puts2 - Prints every other character.
  * @str: Pointer to the string to be printed.
  *
  * Description:
- * - This function takes a string pointer as a parameter and prints every other character
+ * - This function takes a string pointer.
  *   of the string, starting with the first character, followed by a new line.
  * - It assumes that the string is null-terminated.
  *

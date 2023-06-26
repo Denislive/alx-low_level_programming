@@ -5,19 +5,19 @@
  * @str: Pointer to the string to be printed.
  *
  * Description: This function takes a string pointer as a parameter and prints every other
- * character of the string, starting with the first character, followed by a new line.
- * It assumes that the string is null-terminated.
+ *              character of the string, starting with the first character, followed by a new line.
+ *              It assumes that the string is null-terminated.
  */
 void puts2(char *str)
 {
-	int i = 0;
+    int i = 0;
 
-	while (str[i] != '\0')
-	{
-		if (i % 2 == 0)
-			_putchar(str[i]);
-		i++;
-	}
+    while (str[i] != '\0')
+    {
+        if (i % 2 == 0)
+            _putchar(str[i]);
+        i++;
+    }
 
-	_putchar('\n');
+    _putchar('\n');
 }

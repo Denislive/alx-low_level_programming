@@ -40,7 +40,7 @@ int _atoi(char *s)
 		}
 
 		/* Handle integer overflow */
-		if ((result * 10 + (s[i] - '0')) > INT_MAX)
+		if ((result > INT_MAX / 10) || (result == INT_MAX / 10 && (s[i] - '0') > INT_MAX % 10))
 		{
 			if (sign == 1)
 				return (INT_MAX);

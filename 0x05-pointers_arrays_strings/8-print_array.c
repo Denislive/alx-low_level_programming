@@ -6,10 +6,10 @@
  * @n: Number of elements to be printed.
  *
  * Description:
- *   - This function takes an array of integers and the number of elements to be printed
+ *   - This function takes an array of integers
  *     as parameters and prints the elements followed by a new line.
  *   - The numbers are separated by a comma and a space.
- *   - The numbers are displayed in the same order as they are stored in the array.
+ *   - The numbers are displayed in the same orray.
  *
  * Return: void
  */

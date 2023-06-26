@@ -15,43 +15,44 @@
  */
 int _atoi(char *s)
 {
-	int sign = 1;
-	int result = 0;
-	int i = 0;
+    int sign = 1;
+    int result = 0;
+    int i = 0;
 
-	/* Check for sign */
-	if (s[0] == '-')
-	{
-		sign = -1;
-		i++;
-	}
-	else if (s[0] == '+')
-	{
-		i++;
-	}
+    /* Check for sign */
+    if (s[0] == '-')
+    {
+        sign = -1;
+        i++;
+    }
+    else if (s[0] == '+')
+    {
+        i++;
+    }
 
-	/* Convert string to integer */
-	while (s[i] != '\0')
-	{
-		if (s[i] < '0' || s[i] > '9')
-		{
-			/* Non-digit character, break the loop */
-			break;
-		}
+    /* Convert string to integer */
+    while (s[i] != '\0')
+    {
+        if (s[i] < '0' || s[i] > '9')
+        {
+            /* Non-digit character, break the loop */
+            break;
+        }
 
-		/* Handle integer overflow */
-		if ((result > INT_MAX / 10) || (result == INT_MAX / 10 && (s[i] - '0') > INT_MAX % 10))
-		{
-			if (sign == 1)
-				return (INT_MAX);
-			else
-				return (INT_MIN);
-		}
+        /* Accumulate the result */
+        result = (result * 10) + (s[i] - '0');
 
-		/* Accumulate the result */
-		result = (result * 10) + (s[i] - '0');
-		i++;
-	}
+        /* Check for overflow */
+        if ((sign == 1 && result < 0) || (sign == -1 && result > 0))
+        {
+            if (sign == 1)
+                return (INT_MAX);
+            else
+                return (INT_MIN);
+        }
 
-	return (result * sign);
+        i++;
+    }
+
+    return (result * sign);
 }

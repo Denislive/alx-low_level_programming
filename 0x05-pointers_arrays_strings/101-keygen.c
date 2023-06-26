@@ -9,16 +9,16 @@
  */
 int main(void)
 {
-    srand(time(0)); // Seed the random number generator with current time
+    srand(time(NULL)); /* Seed the random number generator with current time */
 
     char password[6];
     int i;
 
     for (i = 0; i < 5; i++)
     {
-        password[i] = rand() % 94 + 33; // Generate random printable ASCII characters
+        password[i] = rand() % 94 + 33; /* Generate random printable ASCII characters */
     }
-    password[5] = '\0'; // Null-terminate the password
+    password[5] = '\0'; /* Null-terminate the password */
 
     printf("%s\n", password);
 

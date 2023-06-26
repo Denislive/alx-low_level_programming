@@ -24,9 +24,9 @@ int _strlen(char *s)
  * @str: Pointer to the string.
  *
  * Description:
- *   - This function takes a string pointer as a parameter and prints the second half
+ *   - This function takes a string pointer 
  *     of the string, followed by a new line.
- *   - If the number of characters in the string is odd, it prints the last (length - 1) / 2
+ *   - If the number of characters in the string
  *     characters of the string.
  *
  * Return: void

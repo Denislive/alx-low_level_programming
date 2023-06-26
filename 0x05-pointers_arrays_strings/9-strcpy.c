@@ -1,11 +1,11 @@
 /**
- * _strcpy - Copies the string pointed to by src, including the terminating null byte (\0),
+ * _strcpy - Copies the string pointed.
  *            to the buffer pointed to by dest.
  * @dest: Pointer to the destination buffer.
  * @src: Pointer to the source string.
  *
  * Description:
- *   - This function copies the string pointed to by src to the buffer pointed to by dest.
+ *   - This function copies the string pointed.
  *   - The copy includes the terminating null byte ('\0').
  *
  * Return: The pointer to the destination buffer (dest).

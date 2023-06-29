@@ -8,30 +8,28 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-    char *ptr = dest;
-    int dest_len = 0;
+	char *ptr = dest;
+	int dest_len = 0;
 
-    /* Find the end of the destination string */
-    while (*ptr != '\0')
-    {
-        ptr++;
-        dest_len++;
-    }
+	/* Find the end of the destination string */
+	while (*ptr != '\0')
+	{
+		ptr++;
+		dest_len++;
+	}
 
-    /* Append the source string to the destination string */
-    while (*src != '\0' && n > 0)
-    {
-        *ptr = *src;
-        ptr++;
-        src++;
-        n--;
-    }
+	/* Append the source string to the destination string */
+	while (*src != '\0' && n > 0)
+	{
+		*ptr = *src;
+		ptr++;
+		src++;
+		n--;
+	}
 
-    /* Add the terminating null byte */
-    if (dest_len + n >= 0)
-    {
-        *ptr = '\0';
-    }
+	/* Add the terminating null byte */
+	if (dest_len + n >= 0)
+		*ptr = '\0';
 
-    return dest;
+	return (dest);
 }

@@ -1,28 +1,36 @@
-#include "100-rot13.h"
-
 /**
- * rot13 - Encodes a string using the rot13 cipher.
+ * rot13 - Encodes a string using ROT13 cipher.
  * @str: The string to be encoded.
  *
  * Return: Pointer to the encoded string.
  */
 char *rot13(char *str)
 {
-	int i, j;
-	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char *ptr = str;
+	char *start = str;
+	char *alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (*ptr)
 	{
-		for (j = 0; input[j] != '\0'; j++)
+		int index = 0;
+		int found = 0;
+
+		while (alpha[index])
 		{
-			if (str[i] == input[j])
+			if (*ptr == alpha[index])
 			{
-				str[i] = output[j];
+				*ptr = rot13[index];
+				found = 1;
 				break;
 			}
+			index++;
 		}
+
+		ptr++;
+		if (!found)
+			continue;
 	}
 
-	return (str);
+	return (start);
 }

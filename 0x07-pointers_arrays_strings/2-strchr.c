@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * _strchr - Locateof a character in a string
  * @s: Pointer to the string to be searched

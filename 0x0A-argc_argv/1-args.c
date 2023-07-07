@@ -9,11 +9,11 @@
  */
 int main(int argc, char *argv[])
 {
-    /* Unused parameter argv */
-    (void)argv;
+	/* Unused parameter argv */
+	(void)argv;
 
-    /* Print the number of arguments */
-    printf("%d\n", argc - 1);
+	/* Print the number of arguments */
+	printf("%d\n", argc - 1);
 
-    return (0);
+	return (0);
 }

@@ -1,19 +1,18 @@
-#ifndef DOG_H
-#define DOG_H
+#include <stdio.h>
+#include "dog.h"
 
 /**
- * struct dog - Represents information about a dog.
- * @name: The name of the dog.
- * @age: The age of the dog.
- * @owner: The owner of the dog.
+ * main - check the code
  *
- * Description: This structure represents information about a dog,
- *              including its name, age, and owner.
+ * Return: Always 0.
  */
-struct dog {
-	char *name;
-	float age;
-	char *owner;
-};
+int main(void)
+{
+    struct dog my_dog;
 
-#endif /* DOG_H */
+    my_dog.name = "Poppy";
+    my_dog.age = 3.5;
+    my_dog.owner = "Bob";
+    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
+    return (0);
+}
